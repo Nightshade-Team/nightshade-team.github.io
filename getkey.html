@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightshade – Get Your Key</title>
+    <meta name="description"
+        content="Generate your free Nightshade activation key. Watch a short ad and get instant access to all cheats.">
+    <meta name="theme-color" content="#8657C9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Nightshade Logo" class="logo-img">
+                <span>Nightshade</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="getkey.html" class="nav-link-highlight">Get Key</a></li>
+            </ul>
+            <a href="index.html#download" class="nav-cta">Download</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <main class="getkey-page">
+        <div class="getkey-bg">
+            <div class="hero-glow"></div>
+            <div class="hero-glow hero-glow--2"></div>
+        </div>
+
+        <div class="getkey-container">
+            <div class="getkey-header">
+                <span class="section-tag">Activation</span>
+                <h1>Get Your <span class="text-gradient">Free Key</span></h1>
+                <p>Generate an activation key for Nightshade. Complete the steps below to unlock your key.</p>
+                <div class="getkey-ad-notice">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    Nightshade is completely free thanks to ad support. Ads help us keep the project alive and updated.
+                </div>
+            </div>
+
+            <div class="getkey-layout">
+                <div class="getkey-ad-sidebar">
+                    <div class="ad-slot ad-slot--vertical" id="adSlotSidebar">
+                        <div class="ad-placeholder">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                            <span>Advertisement</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="getkey-main">
+                    <div class="getkey-card" id="getkeyCard">
+                        <div class="getkey-steps-indicator">
+                            <div class="getkey-step-dot active" data-step="1">1</div>
+                            <div class="getkey-step-line"></div>
+                            <div class="getkey-step-dot" data-step="2">2</div>
+                            <div class="getkey-step-line"></div>
+                            <div class="getkey-step-dot" data-step="3">3</div>
+                        </div>
+                        <div class="getkey-phase" id="phase1">
+                            <div class="getkey-phase-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--primary-light)" stroke-width="1.5">
+                                    <path
+                                        d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h2>Ready to Get Your Key?</h2>
+                            <p>Click the button below, wait 30 seconds, and your activation key will be generated.</p>
+                            <button class="btn btn-primary btn-lg getkey-btn" id="startBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" style="position:relative;z-index:1">
+                                    <path
+                                        d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                                </svg>
+                                <span style="position:relative;z-index:1">Generate Key</span>
+                            </button>
+                        </div>
+                        <div class="getkey-phase hidden" id="phase2">
+                            <div class="getkey-timer-wrapper">
+                                <div class="getkey-timer-ring">
+                                    <svg viewBox="0 0 120 120">
+                                        <circle class="timer-bg" cx="60" cy="60" r="54" fill="none"
+                                            stroke="rgba(134,87,201,0.15)" stroke-width="6" />
+                                        <circle class="timer-progress" id="timerProgress" cx="60" cy="60" r="54"
+                                            fill="none" stroke="url(#timerGrad)" stroke-width="6" stroke-linecap="round"
+                                            stroke-dasharray="339.292" stroke-dashoffset="0"
+                                            transform="rotate(-90 60 60)" />
+                                        <defs>
+                                            <linearGradient id="timerGrad" x1="0" y1="0" x2="1" y2="1">
+                                                <stop offset="0%" stop-color="#A77EE0" />
+                                                <stop offset="100%" stop-color="#8657C9" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <div class="timer-text">
+                                        <span class="timer-seconds" id="timerSeconds">30</span>
+                                        <span class="timer-label">seconds</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>Generating your key...</h2>
+                            <p>Please wait while we prepare your activation key. Do not close this page.</p>
+                            <div class="ad-slot ad-slot--horizontal" id="adSlotWaiting">
+                                <div class="ad-placeholder">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <path d="M3 9h18M9 21V9" />
+                                    </svg>
+                                    <span>Advertisement</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="getkey-phase hidden" id="phase3">
+                            <div class="getkey-success-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#27C93F"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h2>Your key is ready!</h2>
+                            <p>Copy the key below and paste it into Nightshade to activate.</p>
+                            <div class="getkey-key-box" id="keyBox">
+                                <span class="getkey-key-text" id="keyText">NSHD-XXXX-XXXX-XXXX</span>
+                                <button class="getkey-copy-btn" id="copyBtn" title="Copy to clipboard">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                    <span id="copyBtnText">Copy</span>
+                                </button>
+                            </div>
+                            <div class="getkey-key-info">
+                                <div class="getkey-key-detail">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    Valid for 7 days
+                                </div>
+                                <div class="getkey-key-detail">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                    Single use
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="getkey-ad-sidebar">
+                    <div class="ad-slot ad-slot--vertical" id="adSlotSidebar2">
+                        <div class="ad-placeholder">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                            <span>Advertisement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-slot ad-slot--banner" id="adSlotBottom">
+                <div class="ad-placeholder">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <path d="M3 9h18M9 21V9" />
+                    </svg>
+                    <span>Advertisement</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="adblock-overlay hidden" id="adblockOverlay">
+        <div class="adblock-modal">
+            <div class="adblock-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                </svg>
+            </div>
+            <h2>AdBlock Detected</h2>
+            <p>Nightshade is a free project supported by ads. Please disable your ad blocker to generate a key.</p>
+            <div class="adblock-steps">
+                <div class="adblock-step">1. Disable your ad blocker for this site</div>
+                <div class="adblock-step">2. Refresh the page</div>
+                <div class="adblock-step">3. Generate your key</div>
+            </div>
+            <button class="btn btn-primary btn-lg" onclick="location.reload()" style="margin-top:8px">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="position:relative;z-index:1">
+                    <polyline points="23 4 23 10 17 10" />
+                    <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10" />
+                </svg>
+                <span style="position:relative;z-index:1">Refresh Page</span>
+            </button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <img src="logo.png" alt="Nightshade Logo" class="logo-img logo-img--sm">
+                        <span>Nightshade</span>
+                    </a>
+                    <p>Made with ♥ for gamers</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nightshade. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const adblockOverlay = document.getElementById('adblockOverlay');
+            let adblockDetected = false;
+            function showAdblockWall() {
+                if (adblockDetected) return;
+                adblockDetected = true;
+                adblockOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+            function detectAdBlock() {
+                const bait = document.createElement('div');
+                bait.className = 'ad_unit ad-zone textad banner-ad ad-banner pub_300x250 pub_728x90 text-ad adsbox adsbygoogle';
+                bait.setAttribute('id', 'adblock-bait');
+                bait.style.cssText = 'width:1px;height:1px;position:absolute;left:-9999px;top:-9999px;';
+                bait.innerHTML = '&nbsp;';
+                document.body.appendChild(bait);
+                const script = document.createElement('script');
+                script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                script.async = true;
+                script.onerror = () => showAdblockWall();
+                document.head.appendChild(script);
+                fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
+                    method: 'HEAD',
+                    mode: 'no-cors'
+                }).catch(() => showAdblockWall());
+                setTimeout(() => {
+                    if (bait) {
+                        const isHidden = (
+                            bait.offsetParent === null ||
+                            bait.offsetHeight === 0 ||
+                            bait.offsetWidth === 0 ||
+                            bait.clientHeight === 0 ||
+                            getComputedStyle(bait).display === 'none' ||
+                            getComputedStyle(bait).visibility === 'hidden'
+                        );
+                        if (isHidden) showAdblockWall();
+                        if (bait.parentNode) bait.parentNode.removeChild(bait);
+                    }
+                    if (typeof window.adsbygoogle === 'undefined') {
+                        showAdblockWall();
+                    }
+                }, 1500);
+            }
+
+            detectAdBlock();
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('open');
+            });
+            const API_URL = 'https://nightshade-api.awakenx-dev.workers.dev/generate-key';
+            const TIMER_DURATION = 30;
+
+            const startBtn = document.getElementById('startBtn');
+            const copyBtn = document.getElementById('copyBtn');
+            const timerSeconds = document.getElementById('timerSeconds');
+            const timerProgress = document.getElementById('timerProgress');
+            const keyText = document.getElementById('keyText');
+            const copyBtnText = document.getElementById('copyBtnText');
+
+            const phase1 = document.getElementById('phase1');
+            const phase2 = document.getElementById('phase2');
+            const phase3 = document.getElementById('phase3');
+            const stepDots = document.querySelectorAll('.getkey-step-dot');
+
+            function setPhase(num) {
+                [phase1, phase2, phase3].forEach(p => p.classList.add('hidden'));
+                document.getElementById(`phase${num}`).classList.remove('hidden');
+
+                stepDots.forEach((dot, i) => {
+                    dot.classList.remove('active', 'completed');
+                    if (i + 1 < num) dot.classList.add('completed');
+                    if (i + 1 === num) dot.classList.add('active');
+                });
+            }
+            async function requestKey() {
+                try {
+                    const res = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+                    const data = await res.json();
+                    if (data.success && data.key) {
+                        return data.key;
+                    }
+                    throw new Error(data.error || 'Unknown error');
+                } catch (err) {
+                    console.error('Key generation failed:', err);
+                    return null;
+                }
+            }
+            const circumference = 2 * Math.PI * 54;
+            let pendingKey = null;
+
+            function startTimer() {
+                setPhase(2);
+                pendingKey = null;
+                requestKey().then(key => { pendingKey = key; });
+                const startTime = Date.now();
+                const endTime = startTime + TIMER_DURATION * 1000;
+                function tick() {
+                    const now = Date.now();
+                    const elapsed = now - startTime;
+                    const remaining = Math.max(0, Math.ceil((endTime - now) / 1000));
+                    const progress = Math.min(elapsed / (TIMER_DURATION * 1000), 1);
+
+                    timerSeconds.textContent = remaining;
+                    timerProgress.style.strokeDashoffset = circumference * (1 - progress);
+
+                    if (remaining > 0) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        if (pendingKey) {
+                            keyText.textContent = pendingKey;
+                            setTimeout(() => setPhase(3), 500);
+                        } else {
+                            const check = setInterval(() => {
+                                if (pendingKey) {
+                                    clearInterval(check);
+                                    keyText.textContent = pendingKey;
+                                    setPhase(3);
+                                }
+                            }, 200);
+                            setTimeout(() => {
+                                clearInterval(check);
+                                if (!pendingKey) {
+                                    keyText.textContent = 'ERROR — Try again';
+                                    setPhase(3);
+                                }
+                            }, 10000);
+                        }
+                    }
+                }
+
+                requestAnimationFrame(tick);
+            }
+            startBtn.addEventListener('click', () => {
+                startTimer();
+            });
+
+            copyBtn.addEventListener('click', () => {
+                const text = keyText.textContent;
+                if (text === 'ERROR — Try again') return;
+                navigator.clipboard.writeText(text).then(() => {
+                    copyBtnText.textContent = 'Copied!';
+                    copyBtn.classList.add('copied');
+                    document.getElementById('keyBox').classList.add('copied');
+                    stepDots[2].classList.remove('active');
+                    stepDots[2].classList.add('completed');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
