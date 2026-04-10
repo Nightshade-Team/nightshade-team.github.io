@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You – Nightshade</title>
+    <meta name="description"
+        content="Thank you for downloading Nightshade. Get started with your installation and unlock your game's full potential.">
+    <meta name="theme-color" content="#8657C9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .thanks-page {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 80px;
+            overflow: hidden;
+        }
+
+        .thanks-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .thanks-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(80px);
+            animation: glowPulse 6s ease-in-out infinite;
+        }
+
+        .thanks-glow--2 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(107, 63, 175, 0.2) 0%, transparent 70%);
+            top: 30%;
+            left: 60%;
+            animation-delay: -3s;
+            animation-duration: 8s;
+        }
+
+        .thanks-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .thanks-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(114, 69, 182, 0.1);
+            border: 2px solid rgba(114, 69, 182, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            position: relative;
+            animation: successPulseThank 2.5s ease-in-out infinite, scaleIn 0.6s ease-out 0.2s both;
+        }
+
+        .thanks-icon::before {
+            content: '';
+            position: absolute;
+            inset: -14px;
+            border-radius: 50%;
+            border: 1px solid rgba(114, 69, 182, 0.15);
+        }
+
+        .thanks-icon::after {
+            content: '';
+            position: absolute;
+            inset: -28px;
+            border-radius: 50%;
+            border: 1px solid rgba(114, 69, 182, 0.08);
+        }
+
+        .thanks-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--primary-light);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .thanks-icon .check-path {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 60;
+            animation: drawCheck 0.6s ease-out 0.6s forwards;
+        }
+
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes successPulseThank {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(114, 69, 182, 0.25);
+            }
+
+            50% {
+                box-shadow: 0 0 0 16px rgba(114, 69, 182, 0);
+            }
+        }
+
+        .thanks-content h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+
+        .thanks-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto 48px;
+            animation: fadeInUp 0.8s ease-out 0.25s both;
+        }
+
+        .thanks-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+            animation: fadeInUp 0.8s ease-out 0.35s both;
+            position: relative;
+        }
+
+        .thanks-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .thanks-step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(180deg, rgba(114, 69, 182, 0.3), transparent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .thanks-step-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(114, 69, 182, 0.1);
+            border: 1px solid rgba(114, 69, 182, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--primary-light);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .thanks-step-icon::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            border: 1px solid rgba(114, 69, 182, 0.12);
+            transition: var(--transition);
+        }
+
+        .thanks-step-icon::after {
+            content: '';
+            position: absolute;
+            inset: -24px;
+            border-radius: 50%;
+            border: 1px solid rgba(114, 69, 182, 0.06);
+            transition: var(--transition);
+        }
+
+        .thanks-step:hover .thanks-step-icon {
+            background: rgba(114, 69, 182, 0.2);
+            box-shadow: 0 0 30px var(--primary-glow-soft);
+            transform: scale(1.08);
+        }
+
+        .thanks-step:hover .thanks-step-icon::before {
+            border-color: rgba(114, 69, 182, 0.25);
+            inset: -14px;
+        }
+
+        .thanks-step:hover .thanks-step-icon::after {
+            border-color: rgba(114, 69, 182, 0.12);
+            inset: -28px;
+        }
+
+        .thanks-step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .thanks-step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            max-width: 280px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+
+        @media (max-width: 768px) {
+            .thanks-page {
+                padding: 100px 20px 60px;
+            }
+
+            .thanks-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Nightshade Logo" class="logo-img">
+                <span>Nightshade</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="getkey.html">Get Key</a></li>
+            </ul>
+            <a href="index.html#download" class="nav-cta">Download</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="thanks-page">
+        <div class="thanks-bg">
+            <canvas id="particleCanvas"></canvas>
+            <div class="thanks-glow"></div>
+            <div class="thanks-glow thanks-glow--2"></div>
+        </div>
+
+        <div class="thanks-content">
+            <div class="thanks-icon">
+                <svg viewBox="0 0 24 24">
+                    <path class="check-path" d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <h1>Thank You for<br><span class="text-gradient">Downloading!</span></h1>
+            <p class="thanks-subtitle">Your download should begin automatically. If it doesn't,
+                <a href="#" style="color: var(--primary-light); text-decoration: underline;">click here</a>
+                to try again.
+            </p>
+
+            <div class="thanks-steps">
+                <div class="thanks-step">
+                    <div class="thanks-step-number">01</div>
+                    <div class="thanks-step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Run the Installer</h3>
+                    <p>Open the downloaded file and follow the installation wizard.</p>
+                </div>
+                <div class="thanks-step">
+                    <div class="thanks-step-number">02</div>
+                    <div class="thanks-step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Get a License Key</h3>
+                    <p>Visit the <a href="getkey.html"
+                            style="color: var(--primary-light); text-decoration: underline;">Get Key</a> page to obtain
+                        your free activation key.</p>
+                </div>
+                <div class="thanks-step">
+                    <div class="thanks-step-number">03</div>
+                    <div class="thanks-step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Launch &amp; Play</h3>
+                    <p>Start your game, open Nightshade, and activate the cheats you want.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ═══════════════ NAVBAR SCROLL ═══════════════
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // ═══════════════ HAMBURGER ═══════════════
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+
+        // ═══════════════ PARTICLE CANVAS ═══════════════
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.offsetWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.4;
+                this.speedY = (Math.random() - 0.5) * 0.4;
+                this.opacity = Math.random() * 0.5 + 0.1;
+                this.color = Math.random() > 0.5
+                    ? `rgba(134, 87, 201, ${this.opacity})`
+                    : `rgba(167, 126, 224, ${this.opacity * 0.7})`;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
+            particles = [];
+            for (let i = 0; i < count; i++) particles.push(new Particle());
+        }
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(134, 87, 201, ${(1 - dist / 120) * 0.12})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        animate();
+    </script>
+</body>
+
+</html>
